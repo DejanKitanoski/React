@@ -1,0 +1,64 @@
+
+.Cardss {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+/* Parent Component */
+.parent {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.parent h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.children {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Child Component */
+.child {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.child h1 {
+    font-size: 20px;
+    color: #444;
+}
+
+.grandchildren {
+    margin-top: 10px;
+}
+
+/* Grandchild Component */
+.grand {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.grand p {
+    font-size: 16px;
+    color: #555;
+}
+
+.grand strong {
+    color: #333;
+}
