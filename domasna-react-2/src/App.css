@@ -7,7 +7,7 @@
     justify-items: center;
     align-items: center;
 }
-/* Parent Component */
+
 .parent {
     background-color: #f4f4f4;
     padding: 20px;
@@ -21,14 +21,15 @@
     color: #333;
     margin-bottom: 15px;
 }
-
+.children{
+    display: flex;
+}
 .children {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-/* Child Component */
 .child {
     background-color: #fff;
     padding: 15px;
@@ -46,7 +47,7 @@
     margin-top: 10px;
 }
 
-/* Grandchild Component */
+
 .grand {
     background-color: #e0e0e0;
     padding: 10px;
