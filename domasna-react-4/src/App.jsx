@@ -7,7 +7,7 @@ import CatImg from './components/IMG'
 function App() {
   const [catImages, setCatImages] = useState([])
   const fetchCatImages = async () => {
-    const response = await fetch('');
+    const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=10');
       const data = await response.json();
       const url = data.map(catImage => catImage.url);
       setCatImages(url)
@@ -17,8 +17,9 @@ function App() {
     <>
     <DynamicCounter/>
     <Users/>
+    <button onClick={fetchCatImages} style={{width: '400px',height: '400px',borderRadius: '40%',backgroundColor: 'blue'}}> Cat Images</button>
     <div className='cats'>
-    <button onClick={fetchCatImages} style={{width: '400px',height: '400px',borderRadius: '50%',backgroundColor: 'gray'}}>Fetch Cat Images</button>
+    
       {catImages.map((url , index)=> (
         <CatImg key={index} url={url}/>
       ))}

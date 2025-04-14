@@ -5,7 +5,7 @@ const Users = () => {
     const [users, setUsers] = useState({})
     const id = Math.floor(Math.random() * 10) + 1
     useEffect (()=>{
-        fetch(``)
+        fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then((response ) => response.json())
         .then((data) => setUsers(data))
     }, [])
