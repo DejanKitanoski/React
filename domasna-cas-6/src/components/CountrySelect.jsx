@@ -1,23 +1,31 @@
-function CountrySelect({ value, onChange, error }) {
-    const countries = ['USA', 'Macedonija', 'UK', 'Maroko', 'Other'];
-    return (
-      <div>
-        <label>Country:</label>
-        <select
-          name="country"
-          className="w-full border px-2 py-1"
-          value={value}
-          onChange={onChange}
-        >
-          <option value="">-- Select Country --</option>
-          {countries.map((country) => (
-            <option key={country} value={country}>
-              {country}
-            </option>
-          ))}
-        </select>
-        {error && <p className="text-red-500">{error}</p>}
-      </div>
-    );
-  }
-  export default CountrySelect
+import { useState } from "react"
+
+const DropdownForm = () => {
+    const [country, setCountry] = useState("")
+    const handleCountryChange = (event) => {
+        setCountry(event.target.value)
+    }
+    const handleSubmit = (event) => {
+        event.preventDefault()
+    }
+    return(
+        <div>
+            <h2>Country</h2>
+            <form onSubmit={handleSubmit}> 
+                <label>
+                    Select Country:
+                </label>
+                <select value={country} onChange={handleCountryChange}>
+                    <option value="">Select</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                    <option value="macedonia">Macedonia</option>
+                </select>
+                <button type="submit">Submit</button>
+                <h3>You selected: {country}</h3>
+            </form>
+        </div>
+    )
+}
+export default DropdownForm

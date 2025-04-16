@@ -1,13 +1,15 @@
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
 
-import './App.css'
-import Counter from './components/counter'
+import CountryDetail from './pages/CountryDetail'
+
+
 function App() {
-
-
   return (
-    <div>
-      <Counter/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/country/:name" element={<CountryDetail />} />
+    </Routes>
   )
 }
 
