@@ -26,7 +26,7 @@ const Home = () =>{
       );
     
       return (
-        <div className="main-body">
+        <div >
           <input className="crs-bar"
             type="text"
             placeholder="Search countries..."
@@ -34,7 +34,7 @@ const Home = () =>{
             onChange={handleSearch}
             style={{ marginBottom: '20px', padding: '8px' }}
           />
-          <div>
+          <div className="main-body">
             {filteredCountries.map((country,index) => (
               <CountryCard key={index} country={country} />
             ))}

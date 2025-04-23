@@ -1,11 +1,16 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+
+  margin: 0px;
+  padding: 0px;
 }
-
-
+.main-body{
+  display: grid;
+  grid-template-columns: repeat(4,250px);
+  align-items: center;
+  gap: 10px
+  ;
+  justify-content: center;
+}
 .card {
   padding: 2em;
 }
